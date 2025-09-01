@@ -1,15 +1,17 @@
 {"users":
-[{
-    "id": 1,
-    "name": "Uno"
+    [
+        {
+        "name": "Uno",
+        "has_list": false
+        },
+        {
+        "name": "Dos",
+        "has_list": false
+        },
+        {
+        "name": "Tres",
+        "has_list": false
+        }
+    ]
 
-},
-{
-    "id": 2,
-    "name": "Dos"
-},
-{
-    "id": 3,
-    "name": "Tres"
-}]
 }
