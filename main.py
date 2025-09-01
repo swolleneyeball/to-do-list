@@ -1,13 +1,23 @@
 import json, time
 usernames = ["Uno","Dos", "Tres", "Quattro", "Cinco"]
 
-def login() -> bool:
+def login(auth):
     print("Initializing...")
-    time.sleep(3)
-    username = input("Please enter your username: ")
+    time.sleep(2)
+    username = input("Please enter your username ->  ")
     if username in usernames:
         print("Welcome back, " + username + "!")
-        return True
+        auth = True
+        if auth == True:
+            print("Authorized successful.")
+        return auth
     else:
         print("Username not recognized.")
-        return False
+        auth = False
+        if auth == False:
+            print("Unable to authorize.")
+            exit()
+        return auth
+
+auth_status = login(auth=bool)
+print(auth_status)
