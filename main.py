@@ -21,3 +21,14 @@ def login(auth):
 
 auth_status = login(auth=bool)
 print(auth_status)
+
+def to_do_list():
+    if auth_status == True:
+        print("Accessing to-do list...")
+        time.sleep(2)
+        print("To-do list accessed.")
+        # Further implementation of to-do list functionality goes here
+    else:
+        print("Access denied. Please log in.")
+
+to_do_list()
