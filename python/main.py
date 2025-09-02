@@ -1,5 +1,9 @@
 import json, time
-usernames = ["Uno","Dos", "Tres", "Quattro", "Cinco"]
+
+with open('data/users.json') as users:
+    usernames = json.load(users)
+print(usernames)
+print(type(usernames[users]))
 
 def login(auth):
     print("Initializing...")
@@ -27,8 +31,7 @@ def to_do_list():
         print("Accessing to-do list...")
         time.sleep(2)
         print("To-do list accessed.")
-        # Further implementation of to-do list functionality goes here
     else:
-        print("Access denied. Please log in.")
+        print("Access denied.")
 
 to_do_list()
