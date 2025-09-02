@@ -2,15 +2,13 @@ import json, time
 
 with open('data/users.json') as users:
     user_data = json.load(users)
-print(user_data)
 
-for user in user_data:
-    print(user['name'])
-
+user_list = [user['name'] for user in user_data['users']]
+print(user_list)
 def login(auth):
     print("Initializing...")
     username = input("Please enter your username ->  ")
-    if username in user_data:
+    if username in user_list:
         print("Welcome back, " + username + "!")
         auth = True
         if auth == True:
